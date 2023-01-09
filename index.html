@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Emlyn ♡</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='screen'>
+        <a id='screen-1'></a>
+
+        <img src="assets/emlyn-title.png" />
+    </div>
+
+    <div class='screen'>
+        <a id='screen-2'></a>
+
+        <div>
+            <h1>SOCIALS</h1>
+            <div>
+                <div onclick="window.location.href='https://instagram.com/its_emlyn'"><img src="assets/instagram.svg" /><span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;@its_emlyn&nbsp;&nbsp;&nbsp;</span></div>
+                <div onclick="window.location.href='https://snapchat.com/add/its.emlyn'"><img src="assets/snapchat.svg" /><span>&emsp;&emsp;&nbsp;&nbsp;&nbsp;@its_emlyn&nbsp;&nbsp;&nbsp;</span></div>
+                <div onclick="window.location.href='mailto:emlyn@emlyn.xyz'"><img src="assets/email.svg" /><span>&emsp;&emsp;&nbsp;emlyn@emlyn.xyz</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class='screen'>
+        <a id='screen-3'></a>
+        <div style="overflow-y: scroll;">
+            <h1 onclick='window.location.href=""'>NZ Parliament Vote Tracker</h1>
+	    <span style="font-family: 'Space Mono', monospace; color: #fff; font-size: 4vmin; font-weight: bold;">Coming soon!</span>
+            <p>
+                Open and transparent government is a necessity for a fair democracy. And yet, if i wanted to know which bills The <span title="redacted because I'm scared to drop names">██████</span> Party voted to pass, or the <span title="btw the lengths mean nothing">█████████</span> tried to quash, there is no way to do that. How are we, the public, supposed to make informed decisions about the government unless it's easy to see what they want to do? Actions speak louder than words, after all.<br><br>
+                Thats where this comes in. A database, updated weekly from the <a href="https://www.parliament.nz/en/pb/journals-of-the-house" target="_blank">Journals of the House</a>, easily searchable by anyone.
+
+                <br><br><br>
+                Please note that this database is updated automatically, and may take up to a week to reflect changes made
+            </p>
+        </div>
+    </div>
+
+    <div class='screen'>
+        <a id='screen-4'></a>
+        <div>
+            <h1>HEXsweeper</h1>
+            <div id="hexsweep-main">
+                <img src="assets/hexsweep_logo.svg" />
+                <p>Minesweeper... but hexagons.<br />No really. It's that simple</p>
+            </div>
+            <div id="hexsweep-dl" onclick="window.location.href='/assets/Hexsweeper.apk'">
+                <img src="assets/apk.svg" />
+		<span>DOWNLOAD</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id='scroll-selector'>
+        <div class='scroll-diamond' onclick="diamondScrollTo(0)">
+            <a href='#screen-1'></a>
+        </div>
+
+        <div class='diamond-separator-color'></div>
+        <div class='diamond-separator-white'></div>
+
+        <div class='scroll-diamond' onclick="diamondScrollTo(1)">
+            <a href="#screen-2"></a>
+
+        </div>
+
+        <div class='diamond-separator-color'></div>
+        <div class='diamond-separator-white'></div>
+
+
+        <div class='scroll-diamond' onclick="diamondScrollTo(2)">
+            <a href='#screen-3'></a>
+        </div>
+
+
+        <div class='diamond-separator-color'></div>
+        <div class='diamond-separator-white'></div>
+
+
+        <div class='scroll-diamond' onclick="diamondScrollTo(3)">
+            <a href='#screen-4'></a>
+        </div>
+    </div>
+</body>
+
+</html>

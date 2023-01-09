@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen > a {
+    display: block;
+}
+
+
+.screen > div {
+    border: 1vmin solid white;
+    width: 70vw;
+    height: 60vh;
+    position: absolute;
+    top: calc(100vh + ((100vh - 10vmin - 60vh)/2));
+    left: 15vw;
+    padding: 3vmax;
+    padding-top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: hsla(69, 0%, 20%, 30%);
+}
+
+.screen > div > h1 {
+    color: white;
+    font-family: "Source Code Pro", monospace;
+    width: 100%;
+    border-bottom: .5vmin solid white;
+    font-size: 5vmin;
+}
+
+
+
+
+.screen:nth-child(1) {
+    background: radial-gradient(#d0ddf2 0%, #cfc5d1 60%);
+}
+
+.screen:nth-child(1) > img {
+    width: 20vmax;
+    height: 8vmax;
+    position: absolute;
+    left: calc((100vw - 20vmax) / 2);
+    top: calc((90vh - 10vmin - 4vmax) / 2);
+}
+
+
+
+
+.screen:nth-child(2) {
+    background: linear-gradient(45deg, hsla(298, 68%, 90%, 1) 0%, hsla(30, 82%, 91%, 1) 100%);
+}
+
+.screen:nth-child(2) > div > div {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 5vh;
+    justify-content: center;
+    height: 100%;
+}
+
+.screen:nth-child(2) > div > div > div {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    column-gap: 2vw;
+    cursor: pointer;
+}
+
+.screen:nth-child(2) > div > div > div > span {
+    display: block;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3vmin;
+    display: inline-flex;
+    align-items: center;
+}
+
+.screen:nth-child(2) > div > div > div > img {
+    object-fit: contain;
+}
+
+
+
+.screen:nth-child(3) {
+    background: url("assets/parliament-grey.jpg");
+    background-size: cover;
+}
+
+.screen:nth-child(3) > div {
+    position: relative;
+    top: 15vh;
+    overflow: scroll !important;
+}
+
+.screen:nth-child(3) > div > h1 {
+    cursor: pointer;
+}
+
+.screen:nth-child(3) > div > p {
+    font-family: "Space Mono", monospace;
+    color: white;
+    font-size: 2vmin;
+    text-align: center;
+    margin-top: 2vmax;
+}
+
+.screen:nth-child(3) > div > p > a {
+    color: white;
+}
+
+
+
+
+.screen:nth-child(4) {
+    background: url("assets/hexsweep-background.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.screen:nth-child(4) > div {
+    position: relative;
+    top: 15vh;
+    padding-bottom: 2vmax;
+}
+
+#hexsweep-main {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: .5vmin solid white;
+    margin: .5vmin;
+    padding: 1vmin;
+}
+
+#hexsweep-main > img {
+    width: 20vh;
+    height: 20vh;
+    flex-shrinK 1;
+}
+
+#hexsweep-main > p {
+    flex-grow: 1;
+    font-size: 2vmin;
+    align-self: center;
+    display: inline-block;
+    color: white;
+    font-family: "Space Mono", monospace;
+    white-space: nowrap;
+}
+
+
+#hexsweep-dl {
+    position: relative;
+    top: 1vmax;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    max-height: 6vh;
+    column-gap: 5vh;
+}
+
+#hexsweep-dl > span {
+    display: inline;
+    color: white;
+    white-space: nowrap;
+    font-family: 'Source Code Pro', monospace;
+    font-size: max(2vh, 1.5vmax);
+    align-self: center;
+}
+
+#hexsweep-dl > img {
+    transform: scale(0.7);
+}
+
+
+#scroll-selector {
+    width: 70vw;
+    height: 10vmin;
+
+    position: fixed;
+    bottom: 10vh;
+    left: 15vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.diamond-separator-white {
+    flex-grow: 1;
+    background-color: #dddbdf;
+    height: 1vmin;
+}
+
+.diamond-separator-color {
+    flex-grow: 0;
+    background-color: #895ca3;
+    height: 1vmin;
+}
+
+
+.scroll-diamond {
+    flex-grow: 0;
+    width: 6vmin;
+    height: 6vmin;
+    background-image: url("assets/diamond-white.svg");
+    background-size: contain;
+    margin: -1vmin;
+    z-index: 2;
+}
+
+.scroll-diamond:first-child {
+    background-image: url("assets/diamond-color.svg");
+}
+
+
+.scroll-diamond > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
