@@ -1,5 +1,12 @@
+function removeHash () { 
+    history.replaceState("", document.title, window.location.pathname
+                                                       + window.location.search);
+} 
+
 async function diamondScrollTo(n) {
     "use strict";
+    
+    setTimeout(() => { removeHash() }, 1);
 
     let diamonds = document.getElementsByClassName("scroll-diamond");
     let whiteSeps = document.getElementsByClassName("diamond-separator-white");
@@ -14,9 +21,6 @@ async function diamondScrollTo(n) {
         i++;
     }
 
-    console.log("--");
-    console.log(maxDia);
-    console.log(n);
 
     if (maxDia < n) {
         // animate from maxDia up to n
